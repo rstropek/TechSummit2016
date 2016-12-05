@@ -10,7 +10,7 @@ export class AppComponent {
   public products: any[];
 
   constructor(private http: Http) {
-    http.get("http://localhost:11515/api/products")
+    http.get("http://technical-summit-dev.azurewebsites.net/api/products")
       .forEach(resp => {
         this.products = resp.json();
       });
