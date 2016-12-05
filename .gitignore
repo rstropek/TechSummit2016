@@ -4,3 +4,4 @@ obj
 .vs
 dist
 node_modules
+*.csproj.user
