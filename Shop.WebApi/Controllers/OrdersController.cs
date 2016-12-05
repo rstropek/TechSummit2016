@@ -1,5 +1,6 @@
 ﻿using Shop.WebApi.DataAccess;
 using Shop.WebApi.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
@@ -30,6 +31,11 @@ namespace Shop.WebApi.Controllers
             if (!orderLines.Any() || orderLines.Count() > 10)
             {
                 return this.BadRequest("Order must consist of >= 1 and <= 10 items.");
+            }
+
+            if (orderLines.Any(ol => ol.ProductId == 4711))
+            {
+                throw new DivideByZeroException();
             }
 
             return Created("dummy", await this.OrderTable.AddOrderLinesAsync(orderLines));
