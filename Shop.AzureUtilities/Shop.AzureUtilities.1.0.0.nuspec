@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Shop.AzureUtilities</id>
+        <version>1.0.0</version>
+        <authors>Rainer Stropek</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>My package description.</description>
+        <dependencies>
+            <group targetFramework=".NETFramework4.6.1">
+                <dependency id="WindowsAzure.Storage" version="7.2.1" />
+                <dependency id="Microsoft.AspNet.WebApi.Owin" version="5.2.3" />
+                <dependency id="Microsoft.ApplicationInsights" version="2.1.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Debug\Shop.AzureUtilities.dll" target="lib\net461\Shop.AzureUtilities.dll" />
+        <file src="bin\Debug\Shop.AzureUtilities.pdb" target="lib\net461\Shop.AzureUtilities.pdb" />
+    </files>
+</package>
