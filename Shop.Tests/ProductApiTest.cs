@@ -59,5 +59,25 @@ namespace Shop.Tests
                 Assert.AreEqual("Dummy", products[0].Description);
             }
         }
+
+        [TestMethod]
+        public void TestProductEntityToModelConversion()
+        {
+            var pe = new ProductEntity
+            {
+                RowKey = "1",
+                Description = "Dummy",
+                UnitPrice = 100
+            };
+            var p = pe.ToModel();
+            Assert.AreEqual(1.0M, p.UnitPrice);
+        }
+
+        [Ignore]
+        [TestMethod]
+        public void FailingTest()
+        {
+            Assert.Fail();
+        }
     }
 }
