@@ -15,7 +15,7 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Debug\Shop.AzureUtilities.dll" target="lib\net461\Shop.AzureUtilities.dll" />
-        <file src="bin\Debug\Shop.AzureUtilities.pdb" target="lib\net461\Shop.AzureUtilities.pdb" />
+        <file src="bin\Release\Shop.AzureUtilities.dll" target="lib\net461\Shop.AzureUtilities.dll" />
+        <file src="bin\Release\Shop.AzureUtilities.pdb" target="lib\net461\Shop.AzureUtilities.pdb" />
     </files>
 </package>
