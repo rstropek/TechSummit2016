@@ -169,7 +169,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Shop.AzureUtilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Shop.AzureUtilities.1.0.0\lib\net461\Shop.AzureUtilities.dll</HintPath>
+      <HintPath>..\packages\Shop.AzureUtilities.1.0.0-ci-20161205-203056\lib\net461\Shop.AzureUtilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
