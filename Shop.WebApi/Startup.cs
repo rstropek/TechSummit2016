@@ -26,6 +26,7 @@ namespace Shop.WebApi
             // Initialize data store
             new DataStoreInitializer().InitializeDataStoreAsync().Wait();
 
+            // Add CORS to be able to call Web API from other hosts
             app.UseCors(CorsOptions.AllowAll);
 
             // Enable application insights
