@@ -20,8 +20,14 @@ Web development teams need to share components. In .NET we use NuGet for that, i
 * Show prepared build process in VSTS
   * Show connection to GitHub
 * Add NuGet creation step to build process (speak about versioning)
+
+![Package Creation Step](images/nuget-packager.png)
+
 * Create a new feed in VSTS (use it as an example for speaking about NuGet and NPM feed support in VSTS)
 * Create [release management](https://www.visualstudio.com/team-services/release-management/) for publishing the created NuGet package into the new feed
+
+![Publishing NuGet package to feed](images/publish-nuget-to-feed.png)
+
 * Create release and show how NuGet package is published in VSTS
 * Open [web API project](Shop.WebApi) and add package from VSTS feed
 * Show how new feed is referenced in [nuget.config](Shop.WebApi/nuget.config)
@@ -42,6 +48,13 @@ VSTS contains a powerful build system for .NET applications. It also offers [hos
   * Point out tests in [Shop.Tests](Shop.Tests)
 * Create new build process for web API project
   * Add MSBuild arguments triggering creation of web deploy package: `/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.stagingDirectory)"`
+
+![Build Web API with Web Deploy Package](images/build-web-api-with-webdeploy.png)
+
+![NuGet Restore with Config](images/nuget-restore-with-config.png)
+
+![Test Web API](images/test-web-api.png)
+
   * Speak about general capabilities of VSTS build in this context
   * Mention examples (e.g. SauceLabs, Xamarin Test Cloud) for using cloud services for testing clients on different devices and platforms
 * Trigger build by checking in code
@@ -54,6 +67,9 @@ VSTS contains a powerful build system for .NET applications. It also offers [hos
   * Mention settings
   * Mention deployment slots (especially the `test` slot used in this sample)
 * Create release management for publishing the created web deploy package to Azure App Service
+
+![Deploy to Azure App Service](images/deploy-to-app-service.png)
+
 * Create release and show how web deploy package is published to Azure
 
 ## Step 5: Monitoring
@@ -92,6 +108,9 @@ Modern web application often consist of a backend and a SPA front-end. Font end 
   * `npm run build-prod`
   * `docker build -t rstropek/techsummitdemoclient ...`
   * `docker push rstropek/techsummitdemoclient`
+
+![Build Docker Image](images/build-image.png)
+
 * Run build process and show how Docker image is built and published to Docker Hub
 * Show how `microsoft/vsts-agent` can be used to run configurable, Linux-based VSTS build agents without having to install them manually
   * Demo it by stoping and restarting it: `docker run -e VSTS_ACCOUNT=... -e VSTS_TOKEN=... -v /var/run/docker.sock:/var/run/docker.sock -it rstropek/vsts-agent-node`
