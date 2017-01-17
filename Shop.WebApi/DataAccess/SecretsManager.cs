@@ -21,7 +21,7 @@ namespace Shop.WebApi.DataAccess
         private static async Task<string> RefreshSecretsInternalAsync()
         {
             var kv = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(ActiveDirectoryAccessTokenHelper.GetToken));
-            var tableStorageConnectionStringSecret = await kv.GetSecretAsync("https://technical-summit.vault.azure.net/", "SAS-TechnicalSummit-TableStorage");
+            var tableStorageConnectionStringSecret = await kv.GetSecretAsync("https://mssummitvie-prepare.vault.azure.net/", "SAS-TechnicalSummit-TableStorage");
             return tableStorageConnectionStringSecret.Value;
         }
     }
