@@ -8,9 +8,9 @@
         <description>My package description.</description>
         <dependencies>
             <group targetFramework=".NETFramework4.6.1">
-                <dependency id="WindowsAzure.Storage" version="7.2.1" />
+                <dependency id="WindowsAzure.Storage" version="8.0.1" />
                 <dependency id="Microsoft.AspNet.WebApi.Owin" version="5.2.3" />
-                <dependency id="Microsoft.ApplicationInsights" version="2.1.0" />
+                <dependency id="Microsoft.ApplicationInsights" version="2.3.0-beta1" />
             </group>
         </dependencies>
     </metadata>
